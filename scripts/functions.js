@@ -1,53 +1,12 @@
-// Translation strings for supported languages
-const translations = {
-  ka: {
-    title: "გამოიცანი ხილის ფასი 🍑",
-    subtitle: "თუ გამოიცნობ სწორად – მიიღებ 50%-იან ფასდაკლებას!<br>თუკი ვერ – მაინც მიიღებ 35%-იანს!",
-    question: "რამდენი ღირს ეს მანგო (500გ)?",
-    options: ["-- აირჩიე პასუხი --", "10 ლარი", "15 ლარი", "20 ლარი"],
-    submit: "გაგზავნა",
-    correct: "გილოცავ! 🎉 შენ მიიღე 50%-იანი ფასდაკლება!",
-    wrong: "კინაღამ გამოიცანი! შენ მიიღე 35%-იანი ფასდაკლება! 🧡",
-    choose: "გთხოვ აირჩიე პასუხი ☝️"
-  },
-  en: {
-    title: "Guess the Fruit Price 🍑",
-    subtitle: "Guess correctly – get a 50% discount!<br>If not – you still get 35% off!",
-    question: "How much does this mango (500g) cost?",
-    options: ["-- Choose an answer --", "10 GEL", "15 GEL", "20 GEL"],
-    submit: "Submit",
-    correct: "Congratulations! 🎉 You get a 50% discount!",
-    wrong: "Almost! You get a 35% discount! 🧡",
-    choose: "Please select an answer ☝️"
-  },
-  fr: {
-    title: "Devinez le prix du fruit 🍑",
-    subtitle: "Bonne réponse – 50% de réduction !<br>Sinon – 35% de réduction quand même !",
-    question: "Combien coûte cette mangue (500g) ?",
-    options: ["-- Choisissez une réponse --", "10 GEL", "15 GEL", "20 GEL"],
-    submit: "Envoyer",
-    correct: "Félicitations ! 🎉 Vous bénéficiez de 50% de réduction !",
-    wrong: "Presque ! Vous bénéficiez de 35% de réduction ! 🧡",
-    choose: "Veuillez choisir une réponse ☝️"
-  },
-  de: {
-    title: "Errate den Fruchtpreis 🍑",
-    subtitle: "Richtig geraten – 50% Rabatt!<br>Falls nicht – trotzdem 35% Rabatt!",
-    question: "Wie viel kostet diese Mango (500g)?",
-    options: ["-- Antwort wählen --", "10 GEL", "15 GEL", "20 GEL"],
-    submit: "Absenden",
-    correct: "Glückwunsch! 🎉 Du bekommst 50% Rabatt!",
-    wrong: "Fast! Du bekommst 35% Rabatt! 🧡",
-    choose: "Bitte wähle eine Antwort ☝️"
-  }
-};
+import translations from '../scripts/translations.js';
+
 
 // Current language and user name state
 let currentLang = "ka";
 let userName = "";
+let currentQuestion = null; // Store the current question object
 
-
- // Sets the application language and updates UI texts accordingly.
+// Sets the application language and updates UI texts accordingly.
 function setLanguage(lang) {
   userName = document.getElementById('username').value;
   if (!userName) {
@@ -63,17 +22,20 @@ function setLanguage(lang) {
   currentLang = lang;
   const t = translations[lang];
 
+  // Pick a random question
+  const questions = t.questions;
+  currentQuestion = questions[Math.floor(Math.random() * questions.length)];
+
   // Update UI elements with translations
   document.getElementById('title').innerHTML = `${t.title} <span style="font-size:1rem;font-weight:900;">- ${userName}</span>`;
   document.getElementById('subtitle').innerHTML = t.subtitle;
-  document.getElementById('question').innerHTML = t.question;
+  document.getElementById('question').innerHTML = currentQuestion.question;
 
   // Update select options
   const select = document.getElementById('guess');
-  select.options[0].text = t.options[0];
-  select.options[1].text = t.options[1];
-  select.options[2].text = t.options[2];
-  select.options[3].text = t.options[3];
+  for (let i = 0; i < currentQuestion.options.length; i++) {
+    select.options[i].text = currentQuestion.options[i];
+  }
 
   // Update submit button text
   document.getElementById('submitBtn').innerText = t.submit;
@@ -91,7 +53,7 @@ function setLanguage(lang) {
  * Checks the user's answer and updates the UI with the result.
  */
 function checkAnswer() {
-  const guess = document.getElementById('guess').value;
+  const guess = document.getElementById('guess').selectedIndex;
   const resultDiv = document.getElementById('result');
   const select = document.getElementById('guess');
   const button = document.getElementById('submitBtn');
@@ -100,12 +62,12 @@ function checkAnswer() {
   resultDiv.classList.remove('show');
 
   // If no answer is selected
-  if (!guess) {
+  if (guess === 0) {
     resultDiv.innerHTML = `${userName}, ${t.choose}`;
     resultDiv.style.color = "#444";
   } 
   // If the correct answer is selected
-  else if (guess === "20") {
+  else if (guess === currentQuestion.answer) {
     resultDiv.innerHTML = `${userName}, ${t.correct}`;
     resultDiv.style.color = "#388e3c";
     winAudio.play();
@@ -137,3 +99,6 @@ function checkAnswer() {
   // Show result message
   resultDiv.classList.add('show');
 }
+
+window.setLanguage = setLanguage;
+window.checkAnswer = checkAnswer;
