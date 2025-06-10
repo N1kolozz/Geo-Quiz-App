@@ -46,7 +46,7 @@ function setLanguage(lang) {
   modal.classList.add('hide');
   setTimeout(() => {
     modal.style.display = "none";
-    document.getElementById('game-container').style.display = "flex";
+    document.getElementById('game-container').style.display = "block";
   }, 700);
 }
 
@@ -77,7 +77,7 @@ function checkAnswer() {
     if (typeof confetti === "function") {
       confetti({
         particleCount: 200,
-        spread: 100,
+        spread: 50,
         origin: { y: 0.6 }
       });
     }
