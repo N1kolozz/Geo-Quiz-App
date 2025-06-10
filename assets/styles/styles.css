@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
     body {
       font-family: 'Inter', Arial, sans-serif;
-      background: linear-gradient(135deg, #f9fafc 0%, #fceabb 100%);
+      background: linear-gradient(135deg, #f9fafc 0%, #042907 100%);
       min-height: 100vh;
       margin: 0;
       display: flex;
       align-items: center;
       justify-content: center;
+      background-image: url(../images/icons/guessGeorgia.png);
     }
     .container {
-      background: linear-gradient(135deg, #ffffffcc 60%, #d9fcd9 100%);
+      background: linear-gradient(180deg, #ffffffe6 5%, #d9fcd9 100%);
       border-radius: 18px;
       box-shadow: 0 8px 32px rgba(60,60,60,0.12);
       padding: 36px 28px 32px 28px;
@@ -20,15 +21,22 @@
     }
     h1 {
       font-size: 2rem;
-      font-weight: 700;
+      font-weight: 900;
       margin-bottom: 10px;
       color: #22223b;
-      letter-spacing: -1px;
+      text-align: center;
+      margin-top: 0px;
+    }
+    h3 {
+      font-weight: 700;
+      color: #22223b;
+      text-align: center;
     }
     p {
-      color: #4a4e69;
+      color: #205b03;
       font-size: 1.05rem;
       margin-bottom: 28px;
+      text-align: center;
     }
     label {
       display: block;
@@ -74,7 +82,6 @@
       transform: translateY(-2px);
     }
     .result {
-      margin-top: 28px;
       font-size: 1.3rem;
       font-weight: 600;
       min-height: 48px;
@@ -87,6 +94,7 @@
     .result.show {
     display: flex;
       opacity: 1;
+      text-align: center;
     }
     .lang-modal {
   position: fixed;
@@ -105,13 +113,16 @@
   pointer-events: none;
 }
 .lang-modal-content {
-  background: #fff;
+  background: #ffffffdc;
   padding: 32px 24px;
-  border-radius: 14px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+  border-radius: 50px;
   text-align: center;
   transform: translateY(0);
   transition: transform 0.7s cubic-bezier(.4,0,.2,1);
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .lang-modal.hide .lang-modal-content {
   transform: translateY(-500px);
@@ -129,15 +140,35 @@
   font-size: 1rem;
   cursor: pointer;
   transition: background-position 0.5s cubic-bezier(.4,0,.2,1), transform 0.9s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 20px;
 }
 .lang-modal-content button:hover {
     background-position: right;
 }
+
+#game-container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@media (max-width: 768px) {
+  .lang-modal-content {
+    width: 100%;
+  }
+}
+
+
+
     @media (max-width: 500px) {
       .container {
         padding: 18px 6vw 22px 6vw;
-        max-width: 98vw;
       }
-      h1 { font-size: 1.3rem; }
+      h1 { font-size: 1.7rem; }
       .result { font-size: 1.05rem; }
     }

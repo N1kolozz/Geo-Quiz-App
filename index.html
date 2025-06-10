@@ -6,21 +6,28 @@
   <title>Fruit Price Guessing Game</title>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <link rel="stylesheet" href="assets/styles/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <div id="lang-modal" class="lang-modal">
     <div class="lang-modal-content">
-      <h2>🌐 Select Language</h2>
+      <h2 style="color: #073302; font-size: 1.7rem;">🌐 Select Language</h2>
       <input type="text" id="username" placeholder="Enter your name" style="margin-bottom:14px;padding:8px 12px;border-radius:6px;border:1px solid #ddd;width:80%;font-size:1rem;">
       <br>
-      <button onclick="setLanguage('ka')">ქართული</button>
-      <button onclick="setLanguage('en')">English</button>
-      <button onclick="setLanguage('fr')">Français</button>
-      <button onclick="setLanguage('de')">Deutsch</button>
+      <button onclick="setLanguage('ka')">ქართული <img src="assets/images/icons/ka.png" alt="Georgia" style="width:25px;height:25px;"></button>
+      <button onclick="setLanguage('en')">English <img src="assets/images/icons/en.png" alt="English" style="width:25px;height:25px;"></button>
+      <button onclick="setLanguage('fr')">Français <img src="assets/images/icons/fr.png" alt="Français" style="width:25px;height:25px;"></button>
+      <button onclick="setLanguage('de')">Deutsch <img src="assets/images/icons/de.png" alt="Deutsch" style="width:25px;height:25px;"></button>
+      <button onclick="setLanguage('ru')">Русский <img src="assets/images/icons/ru.png" alt="Русский" style="width:25px;height:25px;"></button>
+      <button onclick="setLanguage('tr')">Türkçe <img src="assets/images/icons/tr.png" alt="Türkçe" style="width:25px;height:25px;"></button>
+      <button onclick="setLanguage('ar')">العربية <img src="assets/images/icons/ar.png" alt="العربية" style="width:25px;height:25px;"></button>
+      <button onclick="setLanguage('hi')">हिंदी <img src="assets/images/icons/hi.png" alt="हिंदी" style="width:25px;height:25px;"></button>
+      <button onclick="setLanguage('zh_CN')">中文 <img src="assets/images/icons/zh_CN.png" alt="中文" style="width:25px;height:25px;"></button>
     </div>
   </div>
     <div class="container" id="game-container" style="display:none;">
     <h1 id="title"></h1>
+    <h3 id="userShow"></h3>
     <p id="subtitle"></p>
     <label for="guess" id="question"></label>
     <select id="guess">

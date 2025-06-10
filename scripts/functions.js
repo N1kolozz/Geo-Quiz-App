@@ -27,7 +27,8 @@ function setLanguage(lang) {
   currentQuestion = questions[Math.floor(Math.random() * questions.length)];
 
   // Update UI elements with translations
-  document.getElementById('title').innerHTML = `${t.title} <span style="font-size:1rem;font-weight:900;">- ${userName}</span>`;
+  document.getElementById('title').innerHTML = `${t.title}`;
+  document.getElementById('userShow').innerHTML = `<i class="fa-regular fa-user" style="color: #000000; margin-right: 10px;"></i>${userName}`;
   document.getElementById('subtitle').innerHTML = t.subtitle;
   document.getElementById('question').innerHTML = currentQuestion.question;
 
@@ -45,7 +46,7 @@ function setLanguage(lang) {
   modal.classList.add('hide');
   setTimeout(() => {
     modal.style.display = "none";
-    document.getElementById('game-container').style.display = "block";
+    document.getElementById('game-container').style.display = "flex";
   }, 700);
 }
 
@@ -75,7 +76,7 @@ function checkAnswer() {
     // Trigger confetti animation if available
     if (typeof confetti === "function") {
       confetti({
-        particleCount: 150,
+        particleCount: 200,
         spread: 100,
         origin: { y: 0.6 }
       });
