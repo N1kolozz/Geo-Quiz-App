@@ -1,4 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+
+* {
+  box-sizing: border-box;
+}
+  html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#lang-modal, #game-container {
+  overflow-y: auto;
+}
+
     body {
       font-family: 'Inter', Arial, sans-serif;
       background: linear-gradient(135deg, #f9fafc 0%, #042907 100%);
@@ -37,6 +53,7 @@
       font-size: 1.05rem;
       margin-bottom: 28px;
       text-align: center;
+      font-weight: 600;
     }
     label {
       display: block;
@@ -162,6 +179,12 @@
     width: 100%;
   }
 }
+
+@media (max-height: 667px) {
+  .lang-modal {
+    align-items: flex-start;
+  }
+ }
 
 
 
