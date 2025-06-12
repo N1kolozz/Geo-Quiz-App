@@ -1,24 +1,14 @@
 import translations from '../scripts/translations.js';
 
 
-// Current language and user name state
+// Current language
+
 let currentLang = "ka";
-let userName = "";
 let currentQuestion = null; // Store the current question object
 
 // Sets the application language and updates UI texts accordingly.
 function setLanguage(lang) {
-  userName = document.getElementById('username').value;
-  if (!userName) {
-    // Show placeholder if username is missing
-    const input = document.getElementById('username');
-    input.placeholder = "Name is required!";
-    input.focus();
-    return;
-  }
 
-  // Reset username input border color
-  document.getElementById('username').style.borderColor = "#ddd";
   currentLang = lang;
   const t = translations[lang];
 
@@ -28,7 +18,6 @@ function setLanguage(lang) {
 
   // Update UI elements with translations
   document.getElementById('title').innerHTML = `${t.title}`;
-  document.getElementById('userShow').innerHTML = `<i class="fa-regular fa-user" style="color: #000000; margin-right: 10px;"></i>${userName}`;
   document.getElementById('subtitle').innerHTML = t.subtitle;
   document.getElementById('question').innerHTML = currentQuestion.question;
 
@@ -64,12 +53,12 @@ function checkAnswer() {
 
   // If no answer is selected
   if (guess === 0) {
-    resultDiv.innerHTML = `${userName}, ${t.choose}`;
+    resultDiv.innerHTML = `${t.choose}`;
     resultDiv.style.color = "#444";
   } 
   // If the correct answer is selected
   else if (guess === currentQuestion.answer) {
-    resultDiv.innerHTML = `${userName}, ${t.correct}`;
+    resultDiv.innerHTML = `${t.correct}`;
     resultDiv.style.color = "#388e3c";
     winAudio.play();
 
@@ -90,7 +79,7 @@ function checkAnswer() {
   } 
   // If the answer is incorrect
   else {
-    resultDiv.innerHTML = `${userName}, ${t.wrong}`;
+    resultDiv.innerHTML = `${t.wrong}`;
     resultDiv.style.color = "#ff9900";
     select.disabled = true;
     button.disabled = true;

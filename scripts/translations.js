@@ -1,7 +1,7 @@
 // Translation strings for supported languages
 const translations = {
   ka: {
-    title: "გამოიცანი საქართველოს შესახებ",
+    title: "გამოიცანი საქართველოს შესახებ 🇬🇪",
     subtitle: "თუ გამოიცნობ სწორად – მიიღებ 50%-იან ფასდაკლებას!<br>თუკი ვერ – მაინც მიიღებ 35%-იანს!",
     questions: [
       {
@@ -111,7 +111,7 @@ const translations = {
     choose: "გთხოვ აირჩიე პასუხი ☝️"
   },
   en: {
-    title: "Guess About Georgia",
+    title: "Guess About Georgia 🇬🇪",
     subtitle: "Guess correctly – get a 50% discount!<br>If not – you still get 35% off!",
     questions: [
       {
@@ -221,7 +221,7 @@ const translations = {
     choose: "Please select an answer ☝️"
   },
   fr: {
-    title: "Devinez la Géorgie",
+    title: "Devinez la Géorgie 🇬🇪",
     subtitle: "Devinez correctement – obtenez une réduction de 50 % !<br>Sinon – vous bénéficiez toujours d'une réduction de 35 % !",
     questions: [
       {
@@ -331,7 +331,7 @@ const translations = {
     choose: "Veuillez sélectionner une réponse ☝️"
   },
   de: {
-    title: "Über Georgien raten",
+    title: "Über Georgien raten 🇬🇪",
     subtitle: "Richtig geraten – 50% Rabatt!<br>Wenn nicht – erhalten Sie immer noch 35% Rabatt!",
     questions: [
       {
@@ -441,7 +441,7 @@ const translations = {
     choose: "Bitte wählen Sie eine Antwort ☝️"
   },
   ru: {
-    title: "Угадай о Грузии",
+    title: "Угадай о Грузии 🇬🇪",
     subtitle: "Угадай правильно – получи скидку 50%!<br>Если нет – все равно получишь 35%!",
     questions: [
       {
@@ -661,7 +661,7 @@ const translations = {
     choose: "Lütfen bir cevap seçin ☝️"
   },
   ar: {
-    title: "تخمين حول جورجيا",
+    title: "🇬🇪 تخمين حول جورجيا",
     subtitle: "إذا خمنت بشكل صحيح - ستحصل على خصم 50٪!<br>إذا لم يكن كذلك - فلا يزال بإمكانك الحصول على خصم 35٪!",
     questions: [
       {
@@ -771,7 +771,7 @@ const translations = {
     choose: "الرجاء اختيار إجابة ☝️"
   },
   hi: {
-    title: "जॉर्जिया के बारे में अनुमान लगाएँ",
+    title: "जॉर्जिया के बारे में अनुमान लगाएँ 🇬🇪",
     subtitle: "अगर सही अनुमान लगाया – 50% छूट पाएँ!<br>अगर नहीं – फिर भी 35% छूट पाएँ!",
     questions: [
       {
@@ -880,116 +880,116 @@ const translations = {
     wrong: "लगभग! आपको 35% की छूट मिली! 🧡",
     choose: "कृपया एक उत्तर चुनें ☝️"
   },
-  zh_CN: {
-    title: "猜猜格鲁吉亚",
-    subtitle: "如果猜对了 – 获得 50% 折扣！<br>如果不是 – 您仍然可以获得 35% 的折扣！",
+  zh_TW: {
+    title: "猜猜關於喬治亞 🇬🇪",
+    subtitle: "如果你答對了 – 可獲得 50% 折扣！<br>如果沒答對 – 也能獲得 35% 折扣！",
     questions: [
       {
-        question: "格鲁吉亚的首都在哪里？",
-        options: ["-- 选择一个答案 --", "巴统", "第比利斯", "库塔伊西"],
+        question: "哪一個是喬治亞的首都？",
+        options: ["-- 請選擇答案 --", "巴統", "第比利斯", "庫塔伊西"],
         answer: 2
       },
       {
-        question: "格鲁吉亚最高的山是哪座？",
-        options: ["-- 选择一个答案 --", "卡兹别克", "什哈拉", "特图努尔迪"],
+        question: "哪一座是喬治亞最高的山？",
+        options: ["-- 請選擇答案 --", "卡茲別吉", "什哈拉", "特特努爾迪"],
         answer: 2
       },
       {
-        question: "哪条河流经第比利斯？",
-        options: ["-- 选择一个答案 --", "姆特瓦里", "里奥尼", "恩古里"],
+        question: "哪條河流經第比利斯？",
+        options: ["-- 請選擇答案 --", "姆特克瓦里", "里奧尼", "恩古里"],
         answer: 1
       },
       {
-        question: "哪种是著名的格鲁吉亚葡萄酒？",
-        options: ["-- 选择一个答案 --", "萨别拉维", "霞多丽", "赤霞珠"],
+        question: "最著名的格魯吉亞葡萄酒是什麼？",
+        options: ["-- 請選擇答案 --", "薩別拉維", "夏多內", "卡本內"],
         answer: 1
       },
       {
-        question: "格鲁吉亚的黑海度假胜地是哪一个？",
-        options: ["-- 选择一个答案 --", "巴统", "古道里", "巴库里亚尼"],
+        question: "哪一個是喬治亞的黑海度假勝地？",
+        options: ["-- 請選擇答案 --", "巴統", "古道里", "巴庫里亞尼"],
         answer: 1
       },
       {
-        question: "哪种是传统的格鲁吉亚菜肴？",
-        options: ["-- 选择一个答案 --", "赫inkali", "寿司", "披萨"],
+        question: "哪一個是喬治亞的國民料理？",
+        options: ["-- 請選擇答案 --", "辛卡利", "壽司", "披薩"],
         answer: 1
       },
       {
-        question: "哪个城市以硫磺浴场闻名？",
-        options: ["-- 选择一个答案 --", "库塔伊西", "第比利斯", "巴统"],
+        question: "哪個城市以硫磺浴聞名？",
+        options: ["-- 請選擇答案 --", "庫塔伊西", "第比利斯", "巴統"],
         answer: 2
       },
       {
-        question: "格鲁吉亚的国家象征是什么？",
-        options: ["-- 选择一个答案 --", "葡萄叶", "向日葵", "橡树叶"],
+        question: "哪一個是喬治亞的國家象徵？",
+        options: ["-- 請選擇答案 --", "葡萄葉", "向日葵", "橡樹葉"],
         answer: 1
       },
       {
-        question: "格鲁吉亚最大的湖泊是哪一个？",
-        options: ["-- 选择一个答案 --", "巴扎莱蒂", "帕拉瓦尼", "利西"],
+        question: "哪一個是喬治亞最大的湖泊？",
+        options: ["-- 請選擇答案 --", "巴札萊蒂", "帕拉瓦尼", "利西"],
         answer: 2
       },
       {
-        question: "哪个城市以夏季音乐节闻名？",
-        options: ["-- 选择一个答案 --", "巴统", "特拉维", "鲁斯塔维"],
+        question: "哪個城市以夏季音樂節聞名？",
+        options: ["-- 請選擇答案 --", "巴統", "特拉維", "魯斯塔維"],
         answer: 1
       },
       {
-        question: "格鲁吉亚最古老的城市是哪一个？",
-        options: ["-- 选择一个答案 --", "姆茨赫塔", "波季", "哥里"],
+        question: "哪一個是喬治亞最古老的城市？",
+        options: ["-- 請選擇答案 --", "姆茨赫塔", "波提", "哥里"],
         answer: 1
       },
       {
-        question: "格鲁吉亚最长的河流是哪一条？",
-        options: ["-- 选择一个答案 --", "里奥尼", "姆特瓦里", "恩古里"],
+        question: "哪一條是喬治亞最長的河流？",
+        options: ["-- 請選擇答案 --", "里奧尼", "姆特克瓦里", "恩古里"],
         answer: 2
       },
       {
-        question: "格鲁吉亚最大的国家公园是哪一个？",
-        options: ["-- 选择一个答案 --", "博尔若米-哈拉高利", "瓦什洛瓦尼", "姆蒂拉拉"],
+        question: "哪一個是喬治亞最大的國家公園？",
+        options: ["-- 請選擇答案 --", "博爾若米-哈拉加烏利", "瓦什洛瓦尼", "姆蒂拉拉"],
         answer: 1
       },
       {
-        question: "哪个城市以纳里卡拉要塞闻名？",
-        options: ["-- 选择一个答案 --", "第比利斯", "库塔伊西", "巴统"],
+        question: "哪個城市以納里卡拉堡壘聞名？",
+        options: ["-- 請選擇答案 --", "第比利斯", "庫塔伊西", "巴統"],
         answer: 1
       },
       {
-        question: "格鲁吉亚最受欢迎的滑雪胜地是哪一个？",
-        options: ["-- 选择一个答案 --", "古道里", "巴统", "波季"],
+        question: "哪一個是喬治亞最受歡迎的滑雪度假村？",
+        options: ["-- 請選擇答案 --", "古道里", "巴統", "波提"],
         answer: 1
       },
       {
-        question: "格鲁吉亚最大的岛屿是哪一个？",
-        options: ["-- 选择一个答案 --", "塔马里西", "帕利亚斯托米", "没有大岛屿"],
+        question: "哪一個是喬治亞最大的島嶼？",
+        options: ["-- 請選擇答案 --", "塔馬里西", "帕利亞斯托米", "沒有大島嶼"],
         answer: 3
       },
       {
-        question: "哪个城市以巴格拉特大教堂闻名？",
-        options: ["-- 选择一个答案 --", "库塔伊西", "第比利斯", "巴统"],
+        question: "哪個城市以巴格拉特大教堂聞名？",
+        options: ["-- 請選擇答案 --", "庫塔伊西", "第比利斯", "巴統"],
         answer: 1
       },
       {
-        question: "格鲁吉亚最著名的洞穴是哪一个？",
-        options: ["-- 选择一个答案 --", "普罗米修斯洞穴", "萨塔普利亚", "大卫加列亚"],
+        question: "哪一個是喬治亞最著名的洞穴？",
+        options: ["-- 請選擇答案 --", "普羅米修斯洞穴", "薩塔普利亞", "大衛加雷賈"],
         answer: 1
       },
       {
-        question: "格鲁吉亚最大的市场是哪一个？",
-        options: ["-- 选择一个答案 --", "利洛", "退伍军人", "萨布尔塔洛"],
+        question: "哪一個是喬治亞最大的市集？",
+        options: ["-- 請選擇答案 --", "利洛", "退伍軍人", "薩布爾塔洛"],
         answer: 1
       },
       {
-        question: "格鲁吉亚最受欢迎的甜点是哪一个？",
-        options: ["-- 选择一个答案 --", "丘尔奇赫拉", "巧克力", "杏仁糖"],
+        question: "哪一個是喬治亞最受歡迎的甜點？",
+        options: ["-- 請選擇答案 --", "丘爾奇赫拉", "巧克力", "杏仁糖"],
         answer: 1
       }
     ],
-    submit: "提交",
-    correct: "恭喜！🎉 您获得了 50% 的折扣！",
-    wrong: "差点！您获得了 35% 的折扣！🧡",
-    choose: "请选择一个答案 ☝️"
-  }
+    submit: "送出",
+    correct: "恭喜你！🎉 你獲得了 50% 折扣！",
+    wrong: "差一點！你獲得了 35% 折扣！🧡",
+    choose: "請選擇一個答案 ☝️"
+  },
 };
 
 export default translations;
