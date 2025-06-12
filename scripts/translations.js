@@ -135,12 +135,12 @@ const translations = {
         answer: 1
       },
       {
-        question: "Which is a Black Sea resort in Georgia?",
+        question: "Which is Black Sea resort in Georgia?",
         options: ["-- Choose an answer --", "Batumi", "Gudauri", "Bakuriani"],
         answer: 1
       },
       {
-        question: "Which is a traditional Georgian dish?",
+        question: "Which is traditional Georgian dish?",
         options: ["-- Choose an answer --", "Khinkali", "Sushi", "Pizza"],
         answer: 1
       },
